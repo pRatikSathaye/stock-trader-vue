@@ -26,6 +26,10 @@ const mutations = {
     }
 
     state.funds += quantity * stockPrice;
+  },
+  'SET_PORTFOLIO'(state, { stockPortfolio, funds}) {
+    state.funds = funds;
+    state.stocks = stockPortfolio ? stockPortfolio : [];
   }
 }
 
